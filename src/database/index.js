@@ -12,10 +12,10 @@ class Database {
     }
 
     init() {
-        this.connection = new Sequelize();
+        this.connection = new Sequelize(dataBaseConfig);
 
         models.map(model => model.init(this.connection));
     }
 }
 
-export default new Data
+export default new Database();
